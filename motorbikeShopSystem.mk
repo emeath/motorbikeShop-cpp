@@ -60,7 +60,7 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects0=../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/main.cpp$(ObjectSuffix) 
+Objects0=../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Person.cpp$(ObjectSuffix) ../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/main.cpp$(ObjectSuffix) 
 
 
 
@@ -91,6 +91,14 @@ PreBuild:
 ##
 ## Objects
 ##
+../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Person.cpp$(ObjectSuffix): Person.cpp ../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Person.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/mm/Workspaces/ws-cpp/motorbikeShopSystem/Person.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Person.cpp$(ObjectSuffix) $(IncludePath)
+../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Person.cpp$(DependSuffix): Person.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Person.cpp$(ObjectSuffix) -MF../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Person.cpp$(DependSuffix) -MM Person.cpp
+
+../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Person.cpp$(PreprocessSuffix): Person.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) ../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Person.cpp$(PreprocessSuffix) Person.cpp
+
 ../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/main.cpp$(ObjectSuffix): main.cpp ../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/main.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/mm/Workspaces/ws-cpp/motorbikeShopSystem/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
 ../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/main.cpp$(DependSuffix): main.cpp
