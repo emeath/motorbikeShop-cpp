@@ -1,3 +1,7 @@
+#pragma once
+
+#include <string>
+
 class Address
 {
     // Número + nome da rua ou avenida + nome da cidade + sigla do estado + código postal + país
@@ -7,7 +11,7 @@ class Address
     std::string city;
     std::string state;
     std::string zipCode;
-    std::string country
+    std::string country;
   public:
     Address(
         std::string street,

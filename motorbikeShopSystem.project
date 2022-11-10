@@ -93,6 +93,7 @@
     </Configuration>
   </Settings>
   <VirtualDirectory Name="src">
+    <File Name="Address.cpp"/>
     <File Name="Address.hpp"/>
     <File Name="Employee.hpp"/>
     <File Name="Person.cpp"/>
