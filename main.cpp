@@ -2,6 +2,7 @@
 
 #include "Person.hpp"
 #include "Address.hpp"
+#include "Employee.hpp"
 
 using namespace std;
 
@@ -15,6 +16,8 @@ int main()
     Person person4("Fabin", 23);
     
     Address address("St. Peter", "33", "Ohio", "CA", "333-332-044", "US");
+    
+    Employee employee("John", 22, address, 2400, "10x3d");
         
 	return 0;
 }
