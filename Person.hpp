@@ -9,6 +9,7 @@ class Person
         int age;
     public:
         Person(std::string name, int age);
+        Person(std::string name);
         virtual ~Person();
         void setAge(int age);
         std::string getName() const;

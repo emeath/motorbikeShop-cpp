@@ -14,7 +14,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Matheus
-Date                   :=11/11/22
+Date                   :=12/11/22
 CodeLitePath           :=/home/mm/.codelite
 LinkerName             :=/usr/bin/g++
 SharedObjectLinkerName :=/usr/bin/g++ -shared -fPIC
@@ -60,7 +60,7 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects0=../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Employee.cpp$(ObjectSuffix) ../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/main.cpp$(ObjectSuffix) ../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Person.cpp$(ObjectSuffix) ../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Address.cpp$(ObjectSuffix) 
+Objects0=../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/main.cpp$(ObjectSuffix) ../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Person.cpp$(ObjectSuffix) ../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Client.cpp$(ObjectSuffix) ../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Address.cpp$(ObjectSuffix) ../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Employee.cpp$(ObjectSuffix) 
 
 
 
@@ -91,14 +91,6 @@ PreBuild:
 ##
 ## Objects
 ##
-../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Employee.cpp$(ObjectSuffix): Employee.cpp ../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Employee.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/mm/Workspaces/ws-cpp/motorbikeShopSystem/Employee.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Employee.cpp$(ObjectSuffix) $(IncludePath)
-../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Employee.cpp$(DependSuffix): Employee.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Employee.cpp$(ObjectSuffix) -MF../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Employee.cpp$(DependSuffix) -MM Employee.cpp
-
-../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Employee.cpp$(PreprocessSuffix): Employee.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) ../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Employee.cpp$(PreprocessSuffix) Employee.cpp
-
 ../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/main.cpp$(ObjectSuffix): main.cpp ../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/main.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/mm/Workspaces/ws-cpp/motorbikeShopSystem/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
 ../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/main.cpp$(DependSuffix): main.cpp
@@ -115,6 +107,14 @@ PreBuild:
 ../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Person.cpp$(PreprocessSuffix): Person.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) ../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Person.cpp$(PreprocessSuffix) Person.cpp
 
+../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Client.cpp$(ObjectSuffix): Client.cpp ../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Client.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/mm/Workspaces/ws-cpp/motorbikeShopSystem/Client.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Client.cpp$(ObjectSuffix) $(IncludePath)
+../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Client.cpp$(DependSuffix): Client.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Client.cpp$(ObjectSuffix) -MF../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Client.cpp$(DependSuffix) -MM Client.cpp
+
+../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Client.cpp$(PreprocessSuffix): Client.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) ../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Client.cpp$(PreprocessSuffix) Client.cpp
+
 ../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Address.cpp$(ObjectSuffix): Address.cpp ../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Address.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/mm/Workspaces/ws-cpp/motorbikeShopSystem/Address.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Address.cpp$(ObjectSuffix) $(IncludePath)
 ../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Address.cpp$(DependSuffix): Address.cpp
@@ -122,6 +122,14 @@ PreBuild:
 
 ../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Address.cpp$(PreprocessSuffix): Address.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) ../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Address.cpp$(PreprocessSuffix) Address.cpp
+
+../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Employee.cpp$(ObjectSuffix): Employee.cpp ../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Employee.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/mm/Workspaces/ws-cpp/motorbikeShopSystem/Employee.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Employee.cpp$(ObjectSuffix) $(IncludePath)
+../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Employee.cpp$(DependSuffix): Employee.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Employee.cpp$(ObjectSuffix) -MF../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Employee.cpp$(DependSuffix) -MM Employee.cpp
+
+../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Employee.cpp$(PreprocessSuffix): Employee.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) ../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem/Employee.cpp$(PreprocessSuffix) Employee.cpp
 
 
 -include ../cpp/cpp/build-$(ConfigurationName)/__/__/motorbikeShopSystem//*$(DependSuffix)
