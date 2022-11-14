@@ -14,4 +14,5 @@ class Person
         void setAge(int age);
         std::string getName() const;
         int getAge() const;
+        virtual void getInfo() const = 0;
 };
