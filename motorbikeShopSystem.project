@@ -93,6 +93,10 @@
     </Configuration>
   </Settings>
   <VirtualDirectory Name="src">
+    <File Name="Seller.hpp"/>
+    <File Name="Seller.cpp"/>
+    <File Name="Sale.cpp"/>
+    <File Name="Sale.hpp"/>
     <File Name="Client.cpp"/>
     <File Name="Client.hpp"/>
     <File Name="Employee.cpp"/>
